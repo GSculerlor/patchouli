@@ -2,14 +2,12 @@
 title: "Flow and beyond"
 date: 2021-06-12 17:00:00 +0000
 image: 'https://gsculerlor.s-ul.eu/yMzpYCK4'
+note: "this document is based on Kotlin and kotlinx-coroutines version 1.4.3. Things may change on the latest release of Kotlin (1.5.0). and also this document is used for research summary on my workplace. I placed here only for testing my blog markdown renderer" 
 ---
-
-*Note: this document is based on Kotlin and kotlinx-coroutines version 1.4.3. Things may change on the latest release of Kotlin (1.5.0). This document is used for research resume on my workplace, placed here only for my blog parser test*
-
-<!-- end -->
 
 *original post and presentation: 2021-05-12 at Menara Jamsostek lt.23*
 
+<!-- end -->
 
 # Flow
 
@@ -262,7 +260,7 @@ println("Done!")
 
 Note that Kotlin `1.5.0` brings some refined API changes into Channel so some of the mentioned APIs here probably deprecated or become a stable API.
 
-# Case study: Virgo
+# Case study
 
 Let’s dive into our app as a case study.
 
@@ -462,7 +460,7 @@ We wrap our collect block inside launchWhenStarted block. This is because, unlik
 
 Currently, we have suspended functions for every UseCase we have. This is good for a one-shot operation like fetching user detail, getting the inquiry response, etc. But of course, our app UseCase is not always a one-shot operation. Let’s take a look again at home. We have several actions going on at home, getting user detail, fetching the home section, getting user balance, getting recent transactions, etc. If you take a look, getting user balance and recent transactions are actually a perfect fit for an observable operation since they should be updated over time to make sure the displayed result on the screen is representing the actual balance and recent transactions that users have.
 
-To support it we need to change our UseCase to support emitting stream of data instead of one single operation. We have two options here, using flow or channel. Looking at how [Google’s adssched|https://github.com/google/iosched/tree/adssched]implementation, they prefer flow over channel for some reasons:
+To support it we need to change our UseCase to support emitting stream of data instead of one single operation. We have two options here, using flow or channel. Looking at how [Google’s adssched](https://github.com/google/iosched/tree/adssched) implementation, they prefer flow over channel for some reasons:
 
 * Prefer exposing flow since it gives you more flexibility, more explicit contracts, and operators thanchannel
 * flow automatically close the stream of data due to the nature of the terminal operators which trigger the execution of the stream of data and complete successfully or exceptionally depending on all the flow operations in the producer side. On the other hand, the producer might not clean up heavy resources if the Channel is not closed properly which possibly can leaks resources.
