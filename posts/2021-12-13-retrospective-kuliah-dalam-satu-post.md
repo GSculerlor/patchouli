@@ -1,5 +1,5 @@
 ---
-title: "retrospective kuliah dalam satu post"
+title: "[draft] retrospective kuliah dalam satu post"
 date: 2021-12-13 21:00:00 +0000
 image: 'https://gsculerlor.s-ul.eu/yMzpYCK4'
 note: "mungkin berisi kalimat atau statement yang mungkin membuat beberapa pihak merasa disalahkan atau semacamnya. saya mohon maaf sebelumnya kalau ada yang merasa tapi saya mencoba untuk tidak mencantumkan statement yang menghina atau menyalahkan satu pihak atau yang lain. feel free to reach me out to discuss about everything mentioned in this post tho ✌" 
@@ -11,32 +11,13 @@ sebuah postingan tentang retrospektif (tbh more like rant but yeah, just deal wi
 
 # IGS
 
-bagian ini bakal fokus ke pengalaman selama menjadi admin IGS. biar seperti post yang sangat terstruktur, bagian ini akan dibagi jadi 3 bagian.
-
-## the good
-the good 
-
-## the bad
-the bad
-
-## the ugly
-the ugly
+*todo: implement*
 
 ---
 
 # HMTC
 
-sama seperti sebelumnya bagian ini akan dibagi jadi 3 bagian yang berfokus pada pengalaman saya saat jadi staff sampai jadi ketua departemen tekno HMTC.
-
-## the good
-the good 
-
-## the bad
-the bad
-
-## the ugly
-the ugly
-
+*todo: implement*
 ---
 
 # closing remarks
